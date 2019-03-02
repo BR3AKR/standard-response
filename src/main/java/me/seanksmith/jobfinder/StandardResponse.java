@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class StandardResponse {
-    public List<RESPONSE_ERROR> errors;
+    private List<RESPONSE_ERROR> errors;
 
     public StandardResponse() {
         errors = new ArrayList<>();
@@ -12,5 +12,9 @@ public class StandardResponse {
 
     public void addError(RESPONSE_ERROR error) {
         errors.add(error);
+    }
+
+    public List<RESPONSE_ERROR> getErrors() {
+        return this.errors;
     }
 }
